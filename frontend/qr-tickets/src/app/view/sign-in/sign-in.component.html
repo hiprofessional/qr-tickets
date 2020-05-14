@@ -1,0 +1,27 @@
+<div class='col-12 col-md-8 login-form'>
+  <form [formGroup]='signInForm'>
+    <h2>Sign in</h2>
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type='email' class='form-control' id='inputEmail' formControlName='Email'/>
+    </div>
+    <app-validation-errors [field]='emailField'></app-validation-errors>
+
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type='password' class='form-control' id='inputPassword'formControlName='Password'/>
+    </div>
+    <app-validation-errors [field]='passwordField'></app-validation-errors>
+
+    <div class="form-group">
+      <button class='btn btn-primary btn-lg btn-block' (click)='signIn()' [disabled]='!signInForm.valid'>Sign in</button>
+    </div>
+
+    <div class="form-group">
+      <div class="center-block">
+        <span>Don't have account? </span>
+        <a href="#" class='card-link' [routerLink]='["/sign-up"]'>Sign up</a>
+      </div>
+    </div>
+  </form>
+</div>

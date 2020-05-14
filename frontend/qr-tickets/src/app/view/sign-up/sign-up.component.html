@@ -1,0 +1,43 @@
+<div class='col-12 col-md-8 sign-up-form'>
+  <form [formGroup]='signUpForm'>
+    <h2>Sign up</h2>
+    <div class="form-group">
+      <label for="inputName">Name</label>
+      <input type='text' class='form-control' id='inputName' formControlName='Name'/>
+    </div>
+    <app-validation-errors [field]='nameField'></app-validation-errors>
+
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type='email' class='form-control' id='inputEmail' formControlName='Email' />
+    </div>
+    <app-validation-errors [field]='emailField'></app-validation-errors>
+
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type='password' class='form-control' id='inputPassword' formControlName='Password'/>
+    </div>
+    <app-validation-errors [field]='passwordField'></app-validation-errors>
+
+    <div class="form-group">
+      <label for="inputConfirmPassword">Confirm Password</label>
+      <input type='password' class='form-control' id='inputConfirmPassword' formControlName='ConfirmPassword'/>
+    </div>
+    <app-validation-errors [field]='confirmPasswordField'></app-validation-errors>
+
+    <div class="alert alert-danger" role="alert" *ngIf="signUpForm.hasError('notSame')">
+      Passwords are not equal!
+    </div>
+
+    <div class="form-group">
+      <button class='btn btn-success btn-lg btn-block' (click)='signUp()' [disabled]='!signUpForm.valid'>Sign up</button>
+    </div>
+
+    <div class="form-group">
+      <div class="center-block">
+        <span>Don't have account? </span>
+        <a href="#" class='card-link' [routerLink]='["/sign-in"]'>Sign in</a>
+      </div>
+    </div>
+  </form>
+</div>

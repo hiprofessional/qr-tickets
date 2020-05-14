@@ -1,0 +1,34 @@
+<h2>Users</h2>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor='let user of users'>
+      <td>
+        {{user.Id}}
+      </td>
+      <td>
+        <a [routerLink]='user.Id'>
+          {{user.Name}}
+        </a>
+      </td>
+      <td>
+        {{user.Email}}
+      </td>
+    </tr>
+    <tr *ngIf='users.length == 0'>
+      <td colspan="3">
+        <em>
+          There are no users here
+        </em>
+      </td>
+    </tr>
+  </tbody>
+</table>
