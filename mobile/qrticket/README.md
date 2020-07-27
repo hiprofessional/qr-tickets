@@ -4,8 +4,8 @@ Flutter application for my project "QR code ticket app"
 
 This application allows user: 
 
-* sign up;
-* sign in;
+* sign up
+* sign in
 * view user information
 * create and view QR ticket
 * check QR ticket using camera
