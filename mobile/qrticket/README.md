@@ -1,16 +1,17 @@
-# qrticket
+# QrTickets
 
-A new Flutter application.
+Flutter application for my project "QR code ticket app"
 
-## Getting Started
+This application allows user: 
 
-This project is a starting point for a Flutter application.
+* sign up;
+* sign in;
+* view user information
+* create and view QR ticket
+* check QR ticket using camera
 
-A few resources to get you started if this is your first Flutter project:
+## Getting Started With Flutter
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
+For help getting started with Flutter, view 
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
