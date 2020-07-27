@@ -74,7 +74,8 @@ func (server *Server) SearchUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	users, err := user.SearchUsers(server.DB, uint32(userID), uint32(ticketID))
-	if err != nil {
+
+	if err != nil || len(*users) == 0 {
 		responses.ERROR(w, http.StatusInternalServerError, err)
 		return
 	}
